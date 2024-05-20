@@ -4,7 +4,8 @@ def coding():
   word= input("Enter the word for coding: ").lower()
   if(len(word)>=3):
     word = word[1:] + word[0] #remove the first letter and append it at the end
-    word = "".join(random.choices("abcdefghijklmnopqrstuvwxyz",k=3)) + word + "".join(random.choices("abcdefghijklmnopqrstuvwxyz", k=3)) #append three random characters at the starting and       the end
+    alphabets = "abcdefghijklmnopqrstuvwxyz"
+    word = "".join(random.choices(alphabets,k=3)) + word + "".join(random.choices(alphabets, k=3)) #append three random characters at the starting and       the end
     print(word)
   else:
     word = word[::-1]
